@@ -72,7 +72,7 @@ export default function Home() {
                   variant="default"
                   className="bg-[#5865F2] hover:bg-[#4752C4] text-white border-0"
                 >
-                  Rejoindre la communauté sur Discord
+                  Rejoindre le serveur Discord
                 </LinkButton>
                 <LinkButton
                   href="https://chat.whatsapp.com/EzigxN1N2bZBdxooqaH2Gr"
@@ -207,7 +207,7 @@ export default function Home() {
                 variant="default"
                 className="bg-foreground hover:bg-foreground/90 text-background border-0 text-lg font-semibold"
               >
-                Venez contribuer sur nos projets.
+                Contribuer sur nos projets.
               </LinkButton>
             </CardContent>
           </Card>
