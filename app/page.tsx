@@ -21,7 +21,52 @@ import {
   HandHelping,
   Braces,
 } from "lucide-react";
+
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Galsen DEV Links",
+  description:
+    "Le LinkTree de la communauté Galsen DEV, retrouvez tous les liens utiles pour rejoindre la communauté & suivre les activités.",
+  generator: "Next.js",
+  keywords: [
+    "Galsen DEV",
+    "développeurs sénégalais",
+    "communauté tech",
+    "Sénégal",
+  ],
+  authors: [{ name: "Galsen DEV" }],
+  creator: "Galsen DEV",
+  publisher: "Galsen DEV",
+  openGraph: {
+    title: "Galsen DEV Links",
+    description:
+      "La communauté des développeurs sénégalais. Rejoins-nous pour participer à nos évènements et découvrir nos projets, opportunités et ressources.",
+    url: "https://links.galsen.dev",
+    siteName: "Galsen DEV",
+    locale: "fr_SN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Galsen DEV Links",
+    description:
+      "La communauté des développeurs sénégalais. Rejoins-nous pour participer à nos évènements et découvrir nos projets, opportunités et ressources.",
+    creator: "@galsendev",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 export default function Home() {
   return (
@@ -53,7 +98,8 @@ export default function Home() {
           </div>
           <p className="text-lg sm:text-xl text-muted-foreground text-balance leading-relaxed max-w-lg mx-auto">
             La communauté des développeurs sénégalais. Rejoins-nous pour
-            participer à nos évènements et découvrir nos projets et ressources.
+            participer à nos évènements et découvrir nos projets, opportunités
+            et ressources.
           </p>
         </header>
 
@@ -199,18 +245,14 @@ export default function Home() {
           </Card>
 
           {/* GitHub Link */}
-          <Card className="border-2 border-foreground/10 shadow-lg">
-            <CardContent className="p-6">
-              <LinkButton
-                href="https://github.com/GalsenDev221"
-                icon={<Github className="w-6 h-6" />}
-                variant="default"
-                className="bg-foreground hover:bg-foreground/90 text-background border-0 text-lg font-semibold"
-              >
-                Contribuer sur nos projets.
-              </LinkButton>
-            </CardContent>
-          </Card>
+          <LinkButton
+            href="https://github.com/GalsenDev221"
+            icon={<Github className="w-6 h-6" />}
+            variant="default"
+            className="bg-foreground hover:bg-foreground/90 text-background border-0 text-lg font-semibold"
+          >
+            Contribuer sur nos projets.
+          </LinkButton>
         </div>
 
         {/* Footer */}
